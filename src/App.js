@@ -1,4 +1,5 @@
-import { SectionOne } from './components/sectionOne';
+/* eslint-disable import/no-unresolved */
+import SectionOne from './components/sectionOne';
 
 function App() {
 	return (
