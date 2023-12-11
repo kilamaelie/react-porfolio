@@ -1,5 +1,6 @@
-/* eslint-disable import/prefer-default-export */
+/* eslint-disable react/function-component-definition */
+// /* eslint-disable import/prefer-default-export */
 
-export function SectionOne() {
-	return <div>hello section one</div>;
-}
+const SectionOne = () => <div>Hello</div>;
+
+export default SectionOne;
