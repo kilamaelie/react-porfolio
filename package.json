@@ -3,8 +3,7 @@
 	"version": "0.1.0",
 	"author": {
 		"name": "Kilama Elie",
-		"email": "elijahkilama14@gmail.com",
-		"url": "https://react-portfolio.netlify.app"
+		"email": "elijahkilama14@gmail.com"
 	},
 	"license": "MIT",
 	"private": true,
@@ -29,7 +28,8 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"lint": "eslint . --fix --max-warnings=0",
-		"format": "prettier . --writer"
+		"format": "prettier . --writer",
+		"prepare": "husky install"
 	},
 	"lint-staged": {
 		"*.js": "eslint --fix ",
