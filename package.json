@@ -29,7 +29,8 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"lint": "eslint . --fix --max-warnings=0",
-		"format": "prettier . --writer"
+		"format": "prettier . --writer",
+		"prepare": "husky install"
 	},
 	"lint-staged": {
 		"*.js": "eslint --fix ",
