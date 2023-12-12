@@ -3,8 +3,7 @@
 	"version": "0.1.0",
 	"author": {
 		"name": "Kilama Elie",
-		"email": "elijahkilama14@gmail.com",
-		"url": "https://react-portfolio.netlify.app"
+		"email": "elijahkilama14@gmail.com"
 	},
 	"license": "MIT",
 	"private": true,
