@@ -5,7 +5,11 @@ import { createTheme } from '@mui/material/styles';
 
 // Defining a customer theme
 
-const theme = createTheme({
+// background-image: linear-gradient(to right bottom, #111111, #444444, #7d7d7d, #bcbcbc, #ffffff);
+
+const defautTheme = createTheme();
+
+const theme = createTheme(defautTheme, {
 	direction: 'ltr',
 	palette: {
 		mode: 'light',
@@ -72,6 +76,22 @@ const theme = createTheme({
           font-display: swap;
           font-weight: 400
         }
+        body {
+            margin: 0;
+            display: flex;
+            -webkit-box-flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-pack: left;
+            -ms-flex-pack: left;
+            -webkit-justify-content: left;
+            justify-content: left;
+          }
+        ::-webkit-scrollbar {
+            display: none;
+        }
       `,
 		},
 	},
@@ -80,71 +100,77 @@ const theme = createTheme({
 			fontFamily: 'poppins',
 			fontStyle: 'normal',
 			fontWeight: 900,
-			fontSize: '53.75px',
-			// lineHeight: '1.15rem',
+			[defautTheme.breakpoints.between('xs', 'sm')]: {},
+			[defautTheme.breakpoints.up('md')]: {},
 		},
 		h2: {
 			fontFamily: 'poppins',
 			fontStyle: 'normal',
 			fontWeight: 900,
-			fontSize: '44.79px',
-			// lineHeight: '1.15rem',
+			[defautTheme.breakpoints.between('xs', 'sm')]: {},
+			[defautTheme.breakpoints.up('md')]: {},
 		},
 		h3: {
 			fontFamily: 'poppins',
 			fontStyle: 'normal',
 			fontWeight: 900,
 			fontSize: '37.32px',
-			// lineHeight: '1.15rem',
+			[defautTheme.breakpoints.between('xs', 'sm')]: {},
+			[defautTheme.breakpoints.up('md')]: {},
 		},
 		h4: {
 			fontFamily: 'poppins',
 			fontStyle: 'normal',
 			fontWeight: 900,
 			fontSize: '31.1px',
-			// lineHeight: '1.15rem',
+			[defautTheme.breakpoints.between('xs', 'sm')]: {},
+			[defautTheme.breakpoints.up('md')]: {},
 		},
 		h5: {
 			fontFamily: 'poppins',
 			fontStyle: 'normal',
 			fontWeight: 900,
-			fontSize: '25.92px',
-			// lineHeight: '1.15rem',
+			[defautTheme.breakpoints.between('xs', 'sm')]: {},
+			[defautTheme.breakpoints.up('md')]: {},
 		},
 		h6: {
 			fontFamily: 'poppins',
 			fontStyle: 'normal',
 			fontWeight: 900,
 			fontSize: '21.6px',
-			// lineHeight: '1.15rem',
+			[defautTheme.breakpoints.between('xs', 'sm')]: {},
+			[defautTheme.breakpoints.up('md')]: {},
 		},
 		body1: {
 			fontFamily: 'poppins',
-
 			fontStyle: 'normal',
 			fontWeight: 200,
-			fontSize: '18px',
+			[defautTheme.breakpoints.between('xs', 'sm')]: {},
+			[defautTheme.breakpoints.up('md')]: {},
 			// lineHeight: '1.6rem',
 		},
 		body2: {
 			fontFamily: 'poppins',
 			fontStyle: 'normal',
 			fontWeight: 200,
-			fontSize: '15px',
+			[defautTheme.breakpoints.between('xs', 'sm')]: {},
+			[defautTheme.breakpoints.up('md')]: {},
 			// lineHeight: '1.6rem',
 		},
 		subtitle1: {
 			fontFamily: 'poppins',
 			fontStyle: 'normal',
 			fontWeight: 200,
-			fontSize: '12.5px',
+			[defautTheme.breakpoints.between('xs', 'sm')]: {},
+			[defautTheme.breakpoints.up('md')]: {},
 			// lineHeight: '1.6rem',
 		},
 		subtitle2: {
 			fontFamily: 'poppins',
-			fontSize: '11.5px',
 			fontStyle: 'normal',
 			fontWeight: 200,
+			[defautTheme.breakpoints.between('xs', 'sm')]: {},
+			[defautTheme.breakpoints.up('md')]: {},
 			// lineHeight: '1.6rem',
 		},
 		caption: {
@@ -152,7 +178,8 @@ const theme = createTheme({
 			color: '#474747',
 			fontStyle: 'normal',
 			fontWeight: 200,
-			fontSize: '10px',
+			[defautTheme.breakpoints.between('xs', 'sm')]: {},
+			[defautTheme.breakpoints.up('md')]: {},
 			// lineHeight: '1.6rem',
 		},
 	},
