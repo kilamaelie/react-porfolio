@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import '@fontsource/poppins';
 
 import { createTheme } from '@mui/material/styles';

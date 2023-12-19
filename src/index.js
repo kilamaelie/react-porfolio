@@ -1,5 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable import/no-unresolved */
 /* eslint-disable import/order */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -8,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import { LazyMotion, domAnimation } from 'framer-motion';
 import { BrowserRouter as Router } from 'react-router-dom';
-import theme from 'common/constant/theme';
+import theme from './common/constant/theme';
 import '@fontsource/poppins';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
