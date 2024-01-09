@@ -13,7 +13,8 @@
 		"@emotion/styled": "^11.11.0",
 		"@fontsource/montserrat": "^5.0.16",
 		"@fontsource/poppins": "^5.0.8",
-		"@mui/material": "^5.14.20",
+		"@mui/icons-material": "^5.15.1",
+		"@mui/material": "^5.15.1",
 		"@testing-library/jest-dom": "^5.14.1",
 		"@testing-library/react": "^13.0.0",
 		"@testing-library/user-event": "^13.2.1",
@@ -57,7 +58,6 @@
 		]
 	},
 	"devDependencies": {
-		"@craco/craco": "^7.1.0",
 		"eslint": "^7.32.0 || ^8.2.0",
 		"eslint-config-airbnb": "^19.0.4",
 		"eslint-config-prettier": "^9.1.0",

@@ -1,9 +1,11 @@
+/* eslint-disable react/jsx-curly-brace-presence */
 import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import '@fontsource/poppins';
 import '@fontsource/poppins/400.css';
 import Loader from './common/components/loader';
-import { Layout } from './common/components/layout';
+import { Footer } from './common/components/footer';
+// import { Navbar } from './common/components/navbar';
 
 const App = () => {
 	const Home = lazy(() => import('./common/components'));
@@ -14,12 +16,14 @@ const App = () => {
 	);
 
 	return (
-		<Routes>
-			<Route element={<Layout />} path="/">
+		<>
+			{/* <Navbar /> */}
+			<Routes>
 				<Route element={ElementSuspense(<Home />)} index />
 				<Route path="*" element={ElementSuspense(<NoMatch />)} />
-			</Route>
-		</Routes>
+			</Routes>
+			<Footer />
+		</>
 	);
 };
 

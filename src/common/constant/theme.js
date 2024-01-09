@@ -80,13 +80,10 @@ const theme = createTheme(defautTheme, {
             display: flex;
             -webkit-box-flex-wrap: wrap;
             -webkit-flex-wrap: wrap;
-            -webkit-flex-direction: row;
-            -ms-flex-direction: row;
-            flex-direction: row;
-            -webkit-box-pack: left;
-            -ms-flex-pack: left;
-            -webkit-justify-content: left;
-            justify-content: left;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+			gap: 7;
           }
         ::-webkit-scrollbar {
             display: none;

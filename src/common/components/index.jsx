@@ -1,18 +1,22 @@
 /* eslint-disable react/jsx-no-useless-fragment */
-import { AboutSection } from './aboutSection';
-import { ContactSection } from './contact';
+import { Grid } from '@mui/material';
 import { HeroSection } from './heroSection';
-import { ProjectSection } from './project';
 
-function Home() {
+const Home = () => {
 	return (
-		<>
+		<Grid
+			container
+			component="main"
+			xs={11}
+			md={8}
+			xl={6}
+			sx={{
+				marginInline: 'auto',
+			}}
+		>
 			<HeroSection />
-			<AboutSection />
-			<ProjectSection />
-			<ContactSection />
-		</>
+		</Grid>
 	);
-}
+};
 
 export default Home;
