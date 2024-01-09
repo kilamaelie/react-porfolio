@@ -8,7 +8,8 @@
 		"airbnb",
 		"prettier",
 		"plugin:react/jsx-runtime",
-		"plugin:react-hooks/recommended"
+		"plugin:react-hooks/recommended",
+		"plugin:import/react"
 	],
 	"parserOptions": {
 		"ecmaVersion": "latest",
@@ -30,13 +31,20 @@
 			}
 		],
 		"arrow-body-style": "off",
-
 		"import/no-unresolved": [0, { "caseSensitive": false }],
 		"react/no-unstable-nested-components": [
 			"off",
 			{
 				"allowAsProps": true,
 				"customValidators": [] /* optional array of validators used for propTypes validation */
+			}
+		],
+		"react/jsx-props-no-spreading": [
+			0,
+			{
+				"html": "ignore",
+				"custom": "ignore",
+				"explicitSpread": "ignore"
 			}
 		]
 	}
