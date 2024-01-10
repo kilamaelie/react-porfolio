@@ -5,7 +5,7 @@ import '@fontsource/poppins';
 import '@fontsource/poppins/400.css';
 import Loader from './common/components/loader';
 import { Footer } from './common/components/footer';
-// import { Navbar } from './common/components/navbar';
+import { Navbar } from './common/components/navbar';
 
 const App = () => {
 	const Home = lazy(() => import('./common/components'));
@@ -17,7 +17,7 @@ const App = () => {
 
 	return (
 		<>
-			{/* <Navbar /> */}
+			<Navbar />
 			<Routes>
 				<Route element={ElementSuspense(<Home />)} index />
 				<Route path="*" element={ElementSuspense(<NoMatch />)} />
