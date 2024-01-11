@@ -38,7 +38,7 @@ export const Navbar = () => {
 			elevation={0}
 			component="nav"
 			style={{
-				background: !navBack.current ? `rgb(0, 0, 0,0)` : `hsla(0,0%,7%,.45)`,
+				background: !navBack.current ? `rgb(0, 0, 0,0)` : `hsla(0,0%,7%,.10)`,
 				backdropFilter: 'blur(12px)',
 			}}
 		>
@@ -55,7 +55,7 @@ export const Navbar = () => {
 				>
 					<Grid item>
 						<Typography variant="h3" color="primary.main">
-							K
+							Logo
 							<Typography variant="h3" color="secondary.main" component="span">
 								.
 							</Typography>
@@ -86,6 +86,7 @@ export const Navbar = () => {
 							href="#"
 							aria-label="My resume"
 							sx={{
+								margin: '15px 0px',
 								textTransform: 'capitalize',
 								// borderRadius: 2,
 								// padding: '10px 30px',
