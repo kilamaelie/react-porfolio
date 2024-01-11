@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-useless-fragment */
 import { Grid } from '@mui/material';
 import { HeroSection } from './heroSection';
-// import { AboutSection } from './aboutSection';
+import { AboutSection } from './aboutSection';
 
 const Home = () => {
 	return (
@@ -16,7 +16,7 @@ const Home = () => {
 			}}
 		>
 			<HeroSection />
-			{/* <AboutSection /> */}
+			<AboutSection />
 		</Grid>
 	);
 };

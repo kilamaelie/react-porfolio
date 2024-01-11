@@ -46,6 +46,14 @@
 				"custom": "ignore",
 				"explicitSpread": "ignore"
 			}
+		],
+		"react/forbid-prop-types": [
+			0,
+			{
+				"forbid": ["any"],
+				"checkContextTypes": true,
+				"checkChildContextTypes": true
+			}
 		]
 	}
 }
