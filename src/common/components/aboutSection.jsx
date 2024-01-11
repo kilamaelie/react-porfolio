@@ -1,6 +1,8 @@
 import { Grid, Typography, Avatar } from '@mui/material';
+import { BasicTab } from '../utilities/tabs';
 
 export const AboutSection = () => {
+	const tabTitle = ['Skill', 'Education'];
 	return (
 		<Grid container direction="column" gap={4}>
 			<Grid item>
@@ -20,7 +22,7 @@ export const AboutSection = () => {
 						}}
 					/>
 				</Grid>
-				<Grid item xs={12} md={9} container direction="column">
+				<Grid item xs={12} md={9} container direction="column" gap={3}>
 					<Grid item>
 						<Typography variant="body1" color="primary.light">
 							I am a software engineer with a passion for solving complex
@@ -30,6 +32,9 @@ export const AboutSection = () => {
 							that allow me to push the boundaries of what&apos;s possible with
 							technology.
 						</Typography>
+					</Grid>
+					<Grid item>
+						<BasicTab tabTitle={tabTitle} tabPanel={[]} />
 					</Grid>
 				</Grid>
 			</Grid>
