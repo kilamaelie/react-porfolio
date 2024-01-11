@@ -14,7 +14,7 @@ const theme = createTheme(defautTheme, {
 		mode: 'light',
 		primary: {
 			main: '#393939',
-			light: '#C9C9C9',
+			light: '#767676',
 			dark: '#111111',
 		},
 		secondary: {
@@ -140,7 +140,7 @@ const theme = createTheme(defautTheme, {
 		body1: {
 			fontFamily: 'poppins',
 			fontStyle: 'normal',
-			fontWeight: 200,
+			fontWeight: 400,
 			[defautTheme.breakpoints.between('xs', 'sm')]: {},
 			[defautTheme.breakpoints.up('md')]: {},
 			// lineHeight: '1.6rem',
@@ -148,7 +148,7 @@ const theme = createTheme(defautTheme, {
 		body2: {
 			fontFamily: 'poppins',
 			fontStyle: 'normal',
-			fontWeight: 200,
+			fontWeight: 400,
 			[defautTheme.breakpoints.between('xs', 'sm')]: {},
 			[defautTheme.breakpoints.up('md')]: {},
 			// lineHeight: '1.6rem',
@@ -156,7 +156,7 @@ const theme = createTheme(defautTheme, {
 		subtitle1: {
 			fontFamily: 'poppins',
 			fontStyle: 'normal',
-			fontWeight: 200,
+			fontWeight: 500,
 			[defautTheme.breakpoints.between('xs', 'sm')]: {},
 			[defautTheme.breakpoints.up('md')]: {},
 			// lineHeight: '1.6rem',
@@ -164,7 +164,7 @@ const theme = createTheme(defautTheme, {
 		subtitle2: {
 			fontFamily: 'poppins',
 			fontStyle: 'normal',
-			fontWeight: 200,
+			fontWeight: 500,
 			[defautTheme.breakpoints.between('xs', 'sm')]: {},
 			[defautTheme.breakpoints.up('md')]: {},
 			// lineHeight: '1.6rem',
