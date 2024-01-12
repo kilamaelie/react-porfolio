@@ -4,9 +4,11 @@ import { BasicTab } from '../utilities/tabs';
 export const AboutSection = () => {
 	const tabTitle = ['Skill', 'Education'];
 	return (
-		<Grid container direction="column" gap={4}>
+		<Grid container direction="column" gap={6}>
 			<Grid item>
-				<Typography variant="h3">About Me</Typography>
+				<Typography align="center" variant="h3">
+					About Me
+				</Typography>
 			</Grid>
 			<Grid item container>
 				<Grid item xs={12} md={3}>
