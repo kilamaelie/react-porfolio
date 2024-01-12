@@ -2,6 +2,7 @@
 import { Grid } from '@mui/material';
 import { HeroSection } from './heroSection';
 import { AboutSection } from './aboutSection';
+import { ProjectSection } from './project';
 
 const Home = () => {
 	return (
@@ -14,9 +15,11 @@ const Home = () => {
 			sx={{
 				marginInline: 'auto',
 			}}
+			gap={10}
 		>
 			<HeroSection />
 			<AboutSection />
+			<ProjectSection />
 		</Grid>
 	);
 };
