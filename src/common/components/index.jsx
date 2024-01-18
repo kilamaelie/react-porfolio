@@ -3,6 +3,7 @@ import { Grid } from '@mui/material';
 import { HeroSection } from './heroSection';
 import { AboutSection } from './aboutSection';
 import { ProjectSection } from './project';
+import { ContactSection } from './contact';
 
 const Home = () => {
 	return (
@@ -20,6 +21,7 @@ const Home = () => {
 			<HeroSection />
 			<AboutSection />
 			<ProjectSection />
+			<ContactSection />
 		</Grid>
 	);
 };

@@ -92,6 +92,7 @@ export const Navbar = () => {
 								// padding: '10px 30px',
 							}}
 							variant="outlined"
+							color="secondary"
 						>
 							My Resume
 						</Button>
@@ -102,7 +103,7 @@ export const Navbar = () => {
 							color="inherit"
 							onClick={() => handleDrawerOpen()}
 						>
-							<SegmentOutlinedIcon color="black" />
+							<SegmentOutlinedIcon sx={{ color: 'red' }} />
 						</IconButton>
 					</Grid>
 				</Grid>
