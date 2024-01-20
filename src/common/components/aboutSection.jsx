@@ -15,9 +15,7 @@ const tabPanel = [
 export const AboutSection = () => (
 	<Grid container direction="column" gap={6}>
 		<Grid item>
-			<Typography align="center" variant="h3">
-				About Me
-			</Typography>
+			<Typography variant="h3">About Me</Typography>
 		</Grid>
 		<Grid item container>
 			<Grid item xs={12} md={3}>
