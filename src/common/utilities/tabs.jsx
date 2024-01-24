@@ -63,6 +63,9 @@ const Style = () => ({
 	cardMedia: {
 		borderRadius: 2,
 	},
+	subEl: {
+		padding: '0px 10px',
+	},
 });
 
 const projectTabContent = ({ data }) => {
@@ -78,7 +81,7 @@ const projectTabContent = ({ data }) => {
 					md={4}
 					xl={3}
 					direction="column"
-					gap={1}
+					gap={2}
 					key={items}
 					sx={classes.rootCard}
 				>
@@ -90,19 +93,21 @@ const projectTabContent = ({ data }) => {
 							sx={classes.cardMedia}
 						/>
 					</Grid>
-					<Grid item>
-						<Typography variant="h6">{items.title}</Typography>
-					</Grid>
-					<Grid item>
-						<Typography variant="body2" color="primary.light">
-							{items.description}
-						</Typography>
-					</Grid>
-					<Grid item container spacing={4}>
+					<Grid item container direction="column" gap={1} sx={classes.subEl}>
 						<Grid item>
-							{icons.map((item) => (
-								<IconButton size="small">{item}</IconButton>
-							))}
+							<Typography variant="h6">{items.title}</Typography>
+						</Grid>
+						<Grid item>
+							<Typography variant="body2" color="primary.light">
+								{items.description}
+							</Typography>
+						</Grid>
+						<Grid item container spacing={4}>
+							<Grid item>
+								{icons.map((item) => (
+									<IconButton size="small">{item}</IconButton>
+								))}
+							</Grid>
 						</Grid>
 					</Grid>
 				</Grid>
