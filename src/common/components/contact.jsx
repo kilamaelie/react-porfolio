@@ -65,7 +65,13 @@ export const ContactSection = () => {
 					<form>
 						<Grid container direction="row" gap={3}>
 							{contactForm.map((items) => (
-								<Grid item container key={items.id} direction="column" gap={1}>
+								<Grid
+									item
+									container
+									direction="column"
+									gap={1}
+									key={items.title}
+								>
 									<Grid item>
 										<Typography variant="body2">{items.title}</Typography>
 									</Grid>

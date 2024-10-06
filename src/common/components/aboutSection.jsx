@@ -4,11 +4,23 @@ import { BasicTab } from '../utilities/tabs';
 const tabPanel = [
 	{
 		title: 'Skills',
-		data: ['Node.js', 'Express', 'JavaScript', 'React', 'Nextjs'],
+		data: [
+			{ id: '001', skill: 'Node.js' },
+			{ id: '002', skill: 'Express' },
+			{ id: '003', skill: 'JavaScript' },
+			{ id: '004', skill: 'React' },
+			{ id: '005', skill: 'Nextjs' },
+		],
 	},
 	{
 		title: 'Education',
-		data: ['Bachelor of Science, Computer Software Engineering', 'CCNA Cisco'],
+		data: [
+			{
+				id: '006',
+				skill: 'Bachelor of Science, Computer Software Engineering',
+			},
+			{ id: '007', skill: 'CCNA Cisco' },
+		],
 	},
 ];
 

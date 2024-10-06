@@ -83,7 +83,7 @@ export const HeroSection = () => {
 				}}
 			>
 				{archivements.map((item) => (
-					<Grid item key={item} direction="column">
+					<Grid item key={item.title} container direction="column">
 						<Grid item>
 							<Typography variant="h3">{item.number}</Typography>
 						</Grid>

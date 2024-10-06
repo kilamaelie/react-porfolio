@@ -8,6 +8,7 @@ import { ContactSection } from './contact';
 const Home = () => {
 	return (
 		<Grid
+			item
 			container
 			component="main"
 			xs={10}

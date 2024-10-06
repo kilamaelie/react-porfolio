@@ -6,6 +6,7 @@ export const Footer = () => {
 			container
 			component="footer"
 			justifyContent="center"
+			item
 			xs={11}
 			md={8}
 			xl={6}

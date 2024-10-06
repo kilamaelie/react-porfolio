@@ -44,6 +44,7 @@ export const Navbar = () => {
 		>
 			<Toolbar disableGutters>
 				<Grid
+					item
 					container
 					xs={11}
 					md={8}
@@ -66,7 +67,7 @@ export const Navbar = () => {
 						{navLinks.map((page) => (
 							<Button
 								href={page.link}
-								key={page}
+								key={page.id}
 								LinkComponent={Link}
 								sx={{
 									my: 2,

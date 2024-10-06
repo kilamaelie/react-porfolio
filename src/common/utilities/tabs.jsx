@@ -32,8 +32,8 @@ TabContent.propTypes = {
 };
 
 const icons = [
-	<GitHubIcon fontSize="15px" />,
-	<VisibilityIcon fontSize="15px" />,
+	{ id: 0, comp: <GitHubIcon fontSize="15px" /> },
+	{ id: 1, comp: <VisibilityIcon fontSize="15px" /> },
 ];
 
 const Style = () => ({
@@ -82,7 +82,7 @@ const projectTabContent = ({ data }) => {
 					xl={3}
 					direction="column"
 					gap={2}
-					key={items}
+					key={items.title}
 					sx={classes.rootCard}
 				>
 					<Grid item>
@@ -104,8 +104,10 @@ const projectTabContent = ({ data }) => {
 						</Grid>
 						<Grid item container spacing={4}>
 							<Grid item>
-								{icons.map((item) => (
-									<IconButton size="small">{item}</IconButton>
+								{icons.map(({ id, comp }) => (
+									<IconButton size="small" key={id}>
+										{comp}
+									</IconButton>
 								))}
 							</Grid>
 						</Grid>
@@ -119,15 +121,15 @@ const projectTabContent = ({ data }) => {
 const aboutTabContent = ({ data }) => {
 	return (
 		<List component="ul" dense={false}>
-			{data.map((item) => (
-				<ListItem key={item}>
+			{data.map(({ id, skill }) => (
+				<ListItem key={id}>
 					<ListItemIcon>
 						<FiberManualRecordIcon fontSize="10px" />
 					</ListItemIcon>
 					<ListItemText
 						primary={
 							<Typography variant="body2" fontWeight={300}>
-								{item}
+								{skill}
 							</Typography>
 						}
 					/>
@@ -158,17 +160,14 @@ export const BasicTab = ({ tabPanel, tabSection, ...other }) => {
 			>
 				{tabPanel.map((items) => (
 					<Tab
-						label={
-							<Typography variant="body1" key={items}>
-								{items.title}
-							</Typography>
-						}
+						key={items.title}
+						label={<Typography variant="body1">{items.title}</Typography>}
 					/>
 				))}
 			</Tabs>
 
 			{tabPanel.map((items, index) => (
-				<TabContent value={value} index={index} key={items}>
+				<TabContent value={value} index={index} key={items.title}>
 					{tabSection === 'Project'
 						? projectTabContent(items)
 						: aboutTabContent(items)}
@@ -178,8 +177,13 @@ export const BasicTab = ({ tabPanel, tabSection, ...other }) => {
 	);
 };
 
+BasicTab.defaultProps = {
+	centered: false,
+	tabSection: '',
+};
+
 BasicTab.propTypes = {
-	tabPanel: PropTypes.func.isRequired,
-	centered: PropTypes.bool.isRequired,
-	tabSection: PropTypes.string.isRequired,
+	tabPanel: PropTypes.array.isRequired,
+	centered: PropTypes.bool,
+	tabSection: PropTypes.string,
 };

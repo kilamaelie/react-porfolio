@@ -1,7 +1,7 @@
 import { Grid, Typography } from '@mui/material';
 import { BasicTab } from '../utilities/tabs';
 
-// const tab = ['All', 'Web', 'Mobile'];
+const tab = ['All', 'Web', 'Mobile'];
 const isCentered = 'true';
 
 const tabContent = [
@@ -11,7 +11,7 @@ const tabContent = [
 			{
 				thumbnail:
 					'https://res.cloudinary.com/dwz5lx2k7/image/upload/v1668510229/ipyfsdigmsu12t28xs0i.jpg',
-				title: 'React Portfolio',
+				title: 'React Portfolio 1',
 				description:
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
 				links: [
@@ -28,7 +28,7 @@ const tabContent = [
 			{
 				thumbnail:
 					'https://res.cloudinary.com/dwz5lx2k7/image/upload/v1668510229/ipyfsdigmsu12t28xs0i.jpg',
-				title: 'React Portfolio',
+				title: 'React Portfolio 2',
 				description:
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
 				links: [
@@ -45,7 +45,7 @@ const tabContent = [
 			{
 				thumbnail:
 					'https://res.cloudinary.com/dwz5lx2k7/image/upload/v1668510229/ipyfsdigmsu12t28xs0i.jpg',
-				title: 'React Portfolio',
+				title: 'React Portfolio 3',
 				description:
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
 				links: [
@@ -116,7 +116,7 @@ export const ProjectSection = () => {
 			</Grid>
 			<Grid item>
 				<BasicTab
-					// tabTitle={tab}
+					tabTitle={tab}
 					centered={isCentered}
 					tabPanel={tabContent}
 					tabSection="Project"
