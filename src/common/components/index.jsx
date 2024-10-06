@@ -7,22 +7,21 @@ import { ContactSection } from './contact';
 
 const Home = () => {
 	return (
-		<Grid
-			item
-			container
-			component="main"
-			xs={10}
-			md={8}
-			xl={6}
-			sx={{
-				marginInline: 'auto',
-			}}
-			gap={10}
-		>
-			<HeroSection />
-			<AboutSection />
-			<ProjectSection />
-			<ContactSection />
+		<Grid container component="main" justifyContent="center">
+			<Grid
+				item
+				xs={10}
+				md={8}
+				xl={6}
+				container
+				gap={20}
+				flexDirection="column"
+			>
+				<HeroSection />
+				<AboutSection />
+				<ProjectSection />
+				<ContactSection />
+			</Grid>
 		</Grid>
 	);
 };

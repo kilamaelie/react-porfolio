@@ -5,35 +5,37 @@ import { createTheme } from '@mui/material/styles';
 // Defining a customer theme
 
 // background-image: linear-gradient(to right bottom, #111111, #444444, #7d7d7d, #bcbcbc, #ffffff);
+// light: '#767676',
+// dark: '#111111',
 
-const defautTheme = createTheme();
-
-const theme = createTheme(defautTheme, {
-	direction: 'ltr',
+const defautTheme = createTheme({
 	palette: {
 		mode: 'light',
+		tonalOffset: 0.5,
 		primary: {
 			main: '#393939',
-			light: '#767676',
-			dark: '#111111',
 		},
 		secondary: {
 			main: '#D14746',
 			dark: '#93001A',
 		},
 		text: {
-			fontFamily: 'poppins',
 			primary: '#393939',
 			secondary: '#D14746',
 			disabled: 'gray',
 		},
-
 		background: {
 			default: '#FFF',
 			paper: '#C9C9C9',
 		},
 	},
+	typography: {
+		fontFamily: "'poppins'",
+	},
+});
 
+const theme = createTheme(defautTheme, {
+	direction: 'ltr',
 	components: {
 		MuiAppBar: {
 			styleOverrides: {
@@ -42,17 +44,34 @@ const theme = createTheme(defautTheme, {
 				},
 			},
 		},
-		MuiButton: {
+		MuiButtonBase: {
 			styleOverrides: {
 				root: {
 					fontFamily: 'poppins',
 					fontStyle: 'normal',
 					fontWeight: 500,
 					fontSize: '14px',
-					textDecoration: 'capitilize',
+					textTransform: 'capitalize',
 					lineHeight: '21px',
 				},
 			},
+			variants: [
+				{
+					props: { variant: 'main' },
+					style: ({ ownerState }) => {
+						const colr =
+							(ownerState.color && defautTheme.palette[ownerState.color]) ||
+							defautTheme.palette.primary;
+
+						return {
+							border: `1px solid ${colr.light}`,
+							color: colr.main,
+							borderRadius: '10px',
+							padding: '10px 27px',
+						};
+					},
+				},
+			],
 		},
 		MuiInputBase: {
 			styleOverrides: {
@@ -83,7 +102,6 @@ const theme = createTheme(defautTheme, {
             -webkit-flex-direction: column;
             -ms-flex-direction: column;
             flex-direction: column;
-			gap: 7;
           }
         ::-webkit-scrollbar {
             display: none;
