@@ -1,8 +1,8 @@
 import { Grid, Typography } from '@mui/material';
 import { BasicTab } from '../utilities/tabs';
 
-const tab = ['All', 'Web', 'Mobile'];
-const isCentered = 'true';
+// const tab = ['All', 'Web', 'Mobile'];
+const isCentered = true;
 
 const tabContent = [
 	{
@@ -116,7 +116,7 @@ export const ProjectSection = () => {
 			</Grid>
 			<Grid item>
 				<BasicTab
-					tabTitle={tab}
+					// tabTitle={tab}
 					centered={isCentered}
 					tabPanel={tabContent}
 					tabSection="Project"

@@ -4,21 +4,21 @@ import { icons } from '../constant/icons';
 
 const contactForm = [
 	{
-		id: 1,
+		id: '1',
 		type: 'email',
 		title: 'Email',
 		placeholder: 'jon@mail.com',
 		required: true,
 	},
 	{
-		id: 2,
+		id: '2',
 		type: 'text',
 		title: 'Subject',
 		placeholder: 'Just saying Hey',
 		required: true,
 	},
 	{
-		id: 3,
+		id: '3',
 		type: 'text',
 		title: 'Message',
 		placeholder: "Let's talk about ...",

@@ -14,10 +14,12 @@ const defautTheme = createTheme({
 		tonalOffset: 0.5,
 		primary: {
 			main: '#393939',
+			high: '#9c9c9c2e',
 		},
 		secondary: {
 			main: '#D14746',
-			dark: '#93001A',
+			dark: '#c70003',
+			high: '#e8a3a22e',
 		},
 		text: {
 			primary: '#393939',
@@ -44,6 +46,13 @@ const theme = createTheme(defautTheme, {
 				},
 			},
 		},
+		MuiIconButton: {
+			styleOverrides: {
+				root: {
+					transition: defautTheme.transitions.create(),
+				},
+			},
+		},
 		MuiButtonBase: {
 			styleOverrides: {
 				root: {
@@ -53,12 +62,16 @@ const theme = createTheme(defautTheme, {
 					fontSize: '14px',
 					textTransform: 'capitalize',
 					lineHeight: '21px',
+					transition: defautTheme.transitions.create(['all'], {
+						duration: 150,
+					}),
 				},
 			},
 			variants: [
 				{
 					props: { variant: 'main' },
 					style: ({ ownerState }) => {
+						// Change color to custom color
 						const colr =
 							(ownerState.color && defautTheme.palette[ownerState.color]) ||
 							defautTheme.palette.primary;
@@ -68,6 +81,9 @@ const theme = createTheme(defautTheme, {
 							color: colr.main,
 							borderRadius: '10px',
 							padding: '10px 27px',
+							':hover': {
+								backgroundColor: `${colr.high}`,
+							},
 						};
 					},
 				},

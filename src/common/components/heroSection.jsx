@@ -73,12 +73,21 @@ export const HeroSection = () => {
 							target="_blank"
 							rel="noopener"
 							aria-label={item.name}
+							disableRipple
+							sx={{
+								opacity: 0.5,
+								'&:hover': {
+									opacity: 1,
+								},
+							}}
 						>
 							{item.icon}
 						</IconButton>
 					))}
 				</Grid>
-				<ButtonBase variant="main">Contact me</ButtonBase>
+				<ButtonBase variant="main">
+					Contact me
+				</ButtonBase>
 			</Grid>
 		</Grid>
 	);

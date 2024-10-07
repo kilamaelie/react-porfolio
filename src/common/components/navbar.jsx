@@ -4,9 +4,10 @@ import {
 	AppBar,
 	Grid,
 	IconButton,
-	Toolbar,
+	// Toolbar,
 	Typography,
-	Button,
+	Link as MuiLink,
+	ButtonBase,
 } from '@mui/material';
 import SegmentOutlinedIcon from '@mui/icons-material/SegmentOutlined';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
@@ -41,74 +42,89 @@ export const Navbar = () => {
 				background: !navBack.current ? `rgb(0, 0, 0,0)` : `hsla(0,0%,7%,.10)`,
 				backdropFilter: 'blur(12px)',
 			}}
+			sx={{
+				alignItems: 'center',
+			}}
 		>
-			<Toolbar disableGutters>
+			{/* <Toolbar disableGutters> */}
+			<Grid
+				item
+				container
+				xs={11}
+				md={8}
+				xl={6}
+				sx={
+					{
+						// marginInline: 'auto',
+					}
+				}
+				justifyContent="space-between"
+				alignContent="center"
+			>
+				<Typography variant="h3" color="primary.main">
+					Logo
+					<Typography variant="h3" color="secondary.main" component="span">
+						.
+					</Typography>
+				</Typography>
+
 				<Grid
 					item
-					container
-					xs={11}
-					md={8}
-					xl={6}
 					sx={{
-						marginInline: 'auto',
+						display: { xs: 'none', md: 'flex' },
+						maxWidth: 'fit-content',
 					}}
-					justifyContent="space-between"
+					alignContent="center"
+					container
+					gap={2}
 				>
-					<Grid item>
-						<Typography variant="h3" color="primary.main">
-							Logo
-							<Typography variant="h3" color="secondary.main" component="span">
-								.
-							</Typography>
-						</Typography>
-					</Grid>
-
-					<Grid item sx={{ display: { xs: 'none', md: 'flex' } }}>
-						{navLinks.map((page) => (
-							<Button
-								href={page.link}
-								key={page.id}
-								LinkComponent={Link}
-								sx={{
-									my: 2,
-
-									display: 'block',
-									textTransform: 'none',
-									fontWeight: 300,
-								}}
-							>
-								{page.name}
-							</Button>
-						))}
-					</Grid>
-					<Grid item sx={{ display: { xs: 'none', md: 'flex' } }}>
-						<Button
-							LinkComponent={Link}
-							href="#"
-							aria-label="My resume"
+					{navLinks.map((page) => (
+						<MuiLink
+							href={page.link}
+							key={page.id}
+							component={Link}
+							underline="none"
+							textAlign="center"
 							sx={{
-								margin: '15px 0px',
-								textTransform: 'capitalize',
-								// borderRadius: 2,
-								// padding: '10px 30px',
+								// my: 2,
+
+								display: 'block',
+								textTransform: 'none',
+								fontWeight: 300,
 							}}
-							variant="outlined"
-							color="secondary"
 						>
-							My Resume
-						</Button>
-					</Grid>
-					<Grid item sx={{ display: { xs: 'flex', md: 'none' } }}>
-						<IconButton
-							aria-label="menu"
-							color="inherit"
-							onClick={() => handleDrawerOpen()}
-						>
-							<SegmentOutlinedIcon sx={{ color: 'red' }} />
-						</IconButton>
-					</Grid>
+							{page.name}
+						</MuiLink>
+					))}
 				</Grid>
-			</Toolbar>
+				<Grid item sx={{ display: { xs: 'none', md: 'flex' } }}>
+					<ButtonBase
+						aria-label="My resume"
+						to="#"
+						sx={{
+							margin: '15px 0px',
+							textTransform: 'capitalize',
+							// borderRadius: 2,
+							// padding: '10px 30px',
+						}}
+						color="secondary"
+						variant="main"
+						component={Link}
+					>
+						My Resume
+					</ButtonBase>
+				</Grid>
+				<Grid item sx={{ display: { xs: 'flex', md: 'none' } }}>
+					<IconButton
+						aria-label="menu"
+						color="inherit"
+						onClick={() => handleDrawerOpen()}
+					>
+						<SegmentOutlinedIcon sx={{ color: 'red' }} />
+					</IconButton>
+				</Grid>
+			</Grid>
+			{/* </Toolbar> */}
 			<DrawerBar open={open} onClick={handleDrawerClose} />
 		</AppBar>
 	);
