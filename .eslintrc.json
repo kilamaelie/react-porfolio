@@ -4,6 +4,7 @@
 		"es2021": true
 	},
 	"extends": [
+		"eslint:recommended",
 		"plugin:react/recommended",
 		"airbnb",
 		"prettier",
@@ -53,6 +54,13 @@
 				"forbid": ["any"],
 				"checkContextTypes": true,
 				"checkChildContextTypes": true
+			}
+		],
+		"jsx-a11y/aria-role": [
+			2,
+			{
+				"allowedInvalidRoles": ["text"],
+				"ignoreNonDOM": true
 			}
 		]
 	}
