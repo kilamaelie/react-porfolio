@@ -4,18 +4,21 @@ import { icons } from '../constant/icons';
 
 const contactForm = [
 	{
+		id: 1,
 		type: 'email',
 		title: 'Email',
 		placeholder: 'jon@mail.com',
 		required: true,
 	},
 	{
+		id: 2,
 		type: 'text',
 		title: 'Subject',
 		placeholder: 'Just saying Hey',
 		required: true,
 	},
 	{
+		id: 3,
 		type: 'text',
 		title: 'Message',
 		placeholder: "Let's talk about ...",
@@ -29,7 +32,7 @@ export const ContactSection = () => {
 	return (
 		<Grid container direction="column" gap={7}>
 			<Grid item>
-				<Typography align="center" variant="h3">
+				<Typography title="title" component="p" align="center" variant="h3">
 					Let&apos;s Connect
 				</Typography>
 			</Grid>
@@ -62,7 +65,7 @@ export const ContactSection = () => {
 					<form>
 						<Grid container direction="row" gap={3}>
 							{contactForm.map((items) => (
-								<Grid item container direction="column" gap={1}>
+								<Grid item container key={items.id} direction="column" gap={1}>
 									<Grid item>
 										<Typography variant="body2">{items.title}</Typography>
 									</Grid>
