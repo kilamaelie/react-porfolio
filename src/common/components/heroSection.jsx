@@ -33,11 +33,11 @@ export const HeroSection = () => {
 				<Typography variant="h6" color="primary.light" textAlign="center">
 					Hello, I&apos;m
 				</Typography>
-				<Typography variant="h3" color="primary.main" textAlign="center">
+				<Typography variant="h2" color="primary.main" textAlign="center">
 					Full Stack Developer
 				</Typography>
 			</Grid>
-			<Typography variant="subtitile1" color="primary.light" textAlign="center">
+			<Typography textAlign="center" variant="body2">
 				Lörem ipsum rengen ahet medan orade lökosat. Ren geser tism hexak. Venar
 				reras vär antropoosmos megaskop. Oheten exok. Vaspeligen egov decikron,
 				galigt pretion. Temölig möl med ovis: överklassafari möliga. Heteront
@@ -75,7 +75,7 @@ export const HeroSection = () => {
 							aria-label={item.name}
 							disableRipple
 							sx={{
-								opacity: 0.5,
+								opacity: { md: 0.5 },
 								'&:hover': {
 									opacity: 1,
 								},
@@ -85,9 +85,7 @@ export const HeroSection = () => {
 						</IconButton>
 					))}
 				</Grid>
-				<ButtonBase variant="main">
-					Contact me
-				</ButtonBase>
+				<ButtonBase variant="main">Contact me</ButtonBase>
 			</Grid>
 		</Grid>
 	);

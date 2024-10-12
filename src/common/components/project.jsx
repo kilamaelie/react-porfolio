@@ -143,7 +143,7 @@ const tabContent = [
 export const ProjectSection = () => {
 	return (
 		<Grid container direction="column" gap={4}>
-			<Typography align="center" variant="h3">
+			<Typography align="center" variant="h2">
 				My Projects
 			</Typography>
 			<BasicTab

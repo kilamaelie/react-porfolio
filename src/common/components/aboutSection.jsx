@@ -26,7 +26,7 @@ const tabPanel = [
 
 export const AboutSection = () => (
 	<Grid item container direction="column" alignItems="center" gap={6}>
-		<Typography variant="h3">About Me</Typography>
+		<Typography variant="h2">About Me</Typography>
 		<Grid container item xs={12} md={3} justifyContent="space-between">
 			<Avatar
 				src="https://res.cloudinary.com/dwz5lx2k7/image/upload/v1677023871/portfolio/ecom_u4wair.png"

@@ -38,26 +38,29 @@ export const ContactSection = () => {
 			</Grid>
 			<Grid item container spacing={5}>
 				<Grid item xs={12} sm={12} md={6} container direction="column" gap={5}>
-					<Grid item>
-						<Typography variant="body1" color="primary.main">
-							I am currently exploring new opportunities, and my inbox is always
-							open. Whether you have a question or just want to say hi,
-							I&apos;ll do my best to get back to you!
-						</Typography>
-					</Grid>
+					<Typography variant="body2">
+						I am currently exploring new opportunities, and my inbox is always
+						open. Whether you have a question or just want to say hi, I&apos;ll
+						do my best to get back to you!
+					</Typography>
 					<Grid item container>
 						{icons.map((item) => (
-							<Grid item key={item.id}>
-								<IconButton
-									// LinkComponent={Link}
-									href={item.link}
-									target="_blank"
-									rel="noopener"
-									aria-label={item.name}
-								>
-									{item.icon}
-								</IconButton>
-							</Grid>
+							<IconButton
+								href={item.link}
+								target="_blank"
+								rel="noopener"
+								aria-label={item.name}
+								key={item.id}
+								disableRipple
+								sx={{
+									opacity: { md: 0.5 },
+									'&:hover': {
+										opacity: 1,
+									},
+								}}
+							>
+								{item.icon}
+							</IconButton>
 						))}
 					</Grid>
 				</Grid>
@@ -72,19 +75,15 @@ export const ContactSection = () => {
 									gap={1}
 									key={items.title}
 								>
-									<Grid item>
-										<Typography variant="body2">{items.title}</Typography>
-									</Grid>
-									<Grid item>
-										<TextField size="small" fullWidth {...items} />
-									</Grid>
+									<Typography variant="body2">{items.title}</Typography>
+									<TextField size="small" fullWidth {...items} />
 								</Grid>
 							))}
-							<Grid item>
-								<LoadingButton fullWidth type="submit" variant="contained">
-									Send message
-								</LoadingButton>
-							</Grid>
+							{/* <Grid item> */}
+							<LoadingButton type="submit" variant="main">
+								Send message
+							</LoadingButton>
+							{/* </Grid> */}
 						</Grid>
 					</form>
 				</Grid>

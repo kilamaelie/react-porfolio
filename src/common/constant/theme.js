@@ -36,6 +36,23 @@ const defautTheme = createTheme({
 	},
 });
 
+const customBtnStyle = ({ ownerState }) => {
+	// Change color to custom color
+	const colr =
+		(ownerState.color && defautTheme.palette[ownerState.color]) ||
+		defautTheme.palette.primary;
+
+	return {
+		border: `1px solid ${colr.light}`,
+		color: colr.main,
+		borderRadius: '10px',
+		padding: '10px 27px',
+		':hover': {
+			backgroundColor: `${colr.high}`,
+		},
+	};
+};
+
 const theme = createTheme(defautTheme, {
 	direction: 'ltr',
 	components: {
@@ -77,24 +94,16 @@ const theme = createTheme(defautTheme, {
 			variants: [
 				{
 					props: { variant: 'main' },
-					style: ({ ownerState }) => {
-						// Change color to custom color
-						const colr =
-							(ownerState.color && defautTheme.palette[ownerState.color]) ||
-							defautTheme.palette.primary;
-
-						return {
-							border: `1px solid ${colr.light}`,
-							color: colr.main,
-							borderRadius: '10px',
-							padding: '10px 27px',
-							':hover': {
-								backgroundColor: `${colr.high}`,
-							},
-						};
-					},
+					style: customBtnStyle,
 				},
 			],
+		},
+		MuiTextField: {
+			styleOverrides: {
+				inputBase: {
+					borderRadius: '20px',
+				},
+			},
 		},
 		MuiInputBase: {
 			styleOverrides: {
@@ -108,6 +117,14 @@ const theme = createTheme(defautTheme, {
 					paddingBottom: '7px',
 				},
 			},
+		},
+		MuiLoadingButton: {
+			variants: [
+				{
+					props: { variant: 'main' },
+					style: customBtnStyle,
+				},
+			],
 		},
 		MuiCssBaseline: {
 			styleOverrides: `
@@ -144,6 +161,8 @@ const theme = createTheme(defautTheme, {
 			fontFamily: 'poppins',
 			fontStyle: 'normal',
 			fontWeight: 900,
+			fontSize: '37.32px',
+			color: defautTheme.palette.primary.main,
 			[defautTheme.breakpoints.between('xs', 'sm')]: {},
 			[defautTheme.breakpoints.up('md')]: {},
 		},
@@ -151,7 +170,6 @@ const theme = createTheme(defautTheme, {
 			fontFamily: 'poppins',
 			fontStyle: 'normal',
 			fontWeight: 900,
-			fontSize: '37.32px',
 			[defautTheme.breakpoints.between('xs', 'sm')]: {},
 			[defautTheme.breakpoints.up('md')]: {},
 		},
@@ -190,6 +208,7 @@ const theme = createTheme(defautTheme, {
 			fontFamily: 'poppins',
 			fontStyle: 'normal',
 			fontWeight: 400,
+			color: defautTheme.palette.primary.light,
 			[defautTheme.breakpoints.between('xs', 'sm')]: {},
 			[defautTheme.breakpoints.up('md')]: {},
 			// lineHeight: '1.6rem',
