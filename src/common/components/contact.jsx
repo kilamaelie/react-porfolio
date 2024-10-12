@@ -76,7 +76,12 @@ export const ContactSection = () => {
 									key={items.title}
 								>
 									<Typography variant="body2">{items.title}</Typography>
-									<TextField size="small" fullWidth {...items} />
+									<TextField
+										size="small"
+										fullWidth
+										{...items}
+										inputProps={{ variant: 'main' }}
+									/>
 								</Grid>
 							))}
 							{/* <Grid item> */}

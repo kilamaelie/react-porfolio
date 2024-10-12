@@ -73,7 +73,9 @@ const theme = createTheme(defautTheme, {
 		MuiCardMedia: {
 			styleOverrides: {
 				root: {
-					transition: defautTheme.transitions.create(),
+					transition: defautTheme.transitions.create(['all'], {
+						easing: 'ease-in-out',
+					}),
 				},
 			},
 		},
@@ -98,13 +100,6 @@ const theme = createTheme(defautTheme, {
 				},
 			],
 		},
-		MuiTextField: {
-			styleOverrides: {
-				inputBase: {
-					borderRadius: '20px',
-				},
-			},
-		},
 		MuiInputBase: {
 			styleOverrides: {
 				root: {
@@ -115,6 +110,13 @@ const theme = createTheme(defautTheme, {
 					lineHeight: '21px',
 					paddingTop: '2px',
 					paddingBottom: '7px',
+				},
+			},
+		},
+		MuiOutlinedInput: {
+			styleOverrides: {
+				root: {
+					borderRadius: '10px',
 				},
 			},
 		},

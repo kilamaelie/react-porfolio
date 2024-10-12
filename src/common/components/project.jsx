@@ -62,7 +62,7 @@ const tabContent = [
 			{
 				thumbnail:
 					'https://res.cloudinary.com/dwz5lx2k7/image/upload/v1668510229/ipyfsdigmsu12t28xs0i.jpg',
-				title: 'React Portfolio 2',
+				title: 'React Portfolio 4',
 				description:
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
 				links: [
@@ -79,7 +79,7 @@ const tabContent = [
 			{
 				thumbnail:
 					'https://res.cloudinary.com/dwz5lx2k7/image/upload/v1668510229/ipyfsdigmsu12t28xs0i.jpg',
-				title: 'React Portfolio 3',
+				title: 'React Portfolio 5',
 				description:
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
 				links: [
