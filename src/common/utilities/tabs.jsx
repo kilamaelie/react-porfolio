@@ -59,57 +59,62 @@ const Style = () => ({
 	},
 	rootCard: {
 		cursor: 'pointer',
+		borderRadius: 2.5,
+		'&:hover': {
+			backgroundColor: 'primary.high',
+			' img': {
+				transform: 'scale(1.1)',
+				filter: 'Grayscale(0)',
+			},
+		},
 	},
 	cardMedia: {
-		borderRadius: 2,
+		borderRadius: 2.5,
+		overflow: 'hidden',
+		'>img': {
+			filter: { md: 'Grayscale(1)' },
+		},
 	},
 	subEl: {
-		padding: '0px 10px',
+		padding: '0px 10px 10px',
 	},
 });
 
 const projectTabContent = ({ data }) => {
 	const classes = Style();
 	return (
-		<Grid container spacing={6}>
+		<Grid container gap={5} justifyContent="center">
 			{data.map((items) => (
 				<Grid
 					item
 					container
 					xs={12}
-					sm={6}
-					md={4}
+					sm={5.6}
+					md={3.6}
 					xl={3}
 					direction="column"
 					gap={2}
 					key={items.title}
 					sx={classes.rootCard}
 				>
-					<Grid item>
+					<Grid item sx={classes.cardMedia}>
 						<CardMedia
 							component="img"
 							alt={items.title}
 							src={items.thumbnail}
-							sx={classes.cardMedia}
 						/>
 					</Grid>
-					<Grid item container direction="column" gap={1} sx={classes.subEl}>
-						<Grid item>
-							<Typography variant="h6">{items.title}</Typography>
-						</Grid>
-						<Grid item>
-							<Typography variant="body2" color="primary.light">
-								{items.description}
-							</Typography>
-						</Grid>
-						<Grid item container spacing={4}>
-							<Grid item>
-								{icons.map(({ id, comp }) => (
-									<IconButton size="small" key={id}>
-										{comp}
-									</IconButton>
-								))}
-							</Grid>
+					<Grid item container direction="column" gap={2} sx={classes.subEl}>
+						<Typography variant="h6">{items.title}</Typography>
+						<Typography variant="body2" color="primary.light">
+							{items.description}
+						</Typography>
+						<Grid item container gap={1} justifyContent="flex-end">
+							{icons.map(({ id, comp }) => (
+								<IconButton size="small" key={id}>
+									{comp}
+								</IconButton>
+							))}
 						</Grid>
 					</Grid>
 				</Grid>
@@ -138,6 +143,7 @@ const aboutTabContent = ({ data }) => {
 		</List>
 	);
 };
+
 export const BasicTab = ({ tabPanel, tabSection, ...other }) => {
 	const [value, setvalue] = useState(0);
 	const classes = Style();

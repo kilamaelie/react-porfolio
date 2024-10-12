@@ -14,7 +14,7 @@ const defautTheme = createTheme({
 		tonalOffset: 0.5,
 		primary: {
 			main: '#393939',
-			high: '#9c9c9c2e',
+			high: '#9c9c9c20',
 		},
 		secondary: {
 			main: '#D14746',
@@ -47,6 +47,13 @@ const theme = createTheme(defautTheme, {
 			},
 		},
 		MuiIconButton: {
+			styleOverrides: {
+				root: {
+					transition: defautTheme.transitions.create(),
+				},
+			},
+		},
+		MuiCardMedia: {
 			styleOverrides: {
 				root: {
 					transition: defautTheme.transitions.create(),

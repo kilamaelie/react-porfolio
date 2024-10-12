@@ -48,9 +48,7 @@ export const AboutSection = () => (
 					collaborative environments and thrive on challenges that allow me to
 					push the boundaries of what&apos;s possible with technology.
 				</Typography>
-				<Grid item>
-					<BasicTab tabPanel={tabPanel} />
-				</Grid>
+				<BasicTab tabPanel={tabPanel} />
 			</Grid>
 		</Grid>
 	</Grid>
