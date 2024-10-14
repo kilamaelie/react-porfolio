@@ -5,35 +5,56 @@ import { createTheme } from '@mui/material/styles';
 // Defining a customer theme
 
 // background-image: linear-gradient(to right bottom, #111111, #444444, #7d7d7d, #bcbcbc, #ffffff);
+// light: '#767676',
+// dark: '#111111',
 
-const defautTheme = createTheme();
-
-const theme = createTheme(defautTheme, {
-	direction: 'ltr',
+const defautTheme = createTheme({
 	palette: {
 		mode: 'light',
+		tonalOffset: 0.5,
 		primary: {
 			main: '#393939',
-			light: '#767676',
-			dark: '#111111',
+			high: '#9c9c9c20',
 		},
 		secondary: {
 			main: '#D14746',
-			dark: '#93001A',
+			dark: '#c70003',
+			high: '#e8a3a22e',
 		},
 		text: {
-			fontFamily: 'poppins',
 			primary: '#393939',
 			secondary: '#D14746',
 			disabled: 'gray',
 		},
-
 		background: {
 			default: '#FFF',
 			paper: '#C9C9C9',
 		},
 	},
+	typography: {
+		fontFamily: "'poppins'",
+	},
+});
 
+const customBtnStyle = ({ ownerState }) => {
+	// Change color to custom color
+	const colr =
+		(ownerState.color && defautTheme.palette[ownerState.color]) ||
+		defautTheme.palette.primary;
+
+	return {
+		border: `1px solid ${colr.light}`,
+		color: colr.main,
+		borderRadius: '10px',
+		padding: '10px 27px',
+		':hover': {
+			backgroundColor: `${colr.high}`,
+		},
+	};
+};
+
+const theme = createTheme(defautTheme, {
+	direction: 'ltr',
 	components: {
 		MuiAppBar: {
 			styleOverrides: {
@@ -42,17 +63,42 @@ const theme = createTheme(defautTheme, {
 				},
 			},
 		},
-		MuiButton: {
+		MuiIconButton: {
+			styleOverrides: {
+				root: {
+					transition: defautTheme.transitions.create(),
+				},
+			},
+		},
+		MuiCardMedia: {
+			styleOverrides: {
+				root: {
+					transition: defautTheme.transitions.create(['all'], {
+						easing: 'ease-in-out',
+					}),
+				},
+			},
+		},
+		MuiButtonBase: {
 			styleOverrides: {
 				root: {
 					fontFamily: 'poppins',
 					fontStyle: 'normal',
 					fontWeight: 500,
 					fontSize: '14px',
-					textDecoration: 'capitilize',
+					textTransform: 'capitalize',
 					lineHeight: '21px',
+					transition: defautTheme.transitions.create(['all'], {
+						duration: 150,
+					}),
 				},
 			},
+			variants: [
+				{
+					props: { variant: 'main' },
+					style: customBtnStyle,
+				},
+			],
 		},
 		MuiInputBase: {
 			styleOverrides: {
@@ -66,6 +112,21 @@ const theme = createTheme(defautTheme, {
 					paddingBottom: '7px',
 				},
 			},
+		},
+		MuiOutlinedInput: {
+			styleOverrides: {
+				root: {
+					borderRadius: '10px',
+				},
+			},
+		},
+		MuiLoadingButton: {
+			variants: [
+				{
+					props: { variant: 'main' },
+					style: customBtnStyle,
+				},
+			],
 		},
 		MuiCssBaseline: {
 			styleOverrides: `
@@ -83,7 +144,6 @@ const theme = createTheme(defautTheme, {
             -webkit-flex-direction: column;
             -ms-flex-direction: column;
             flex-direction: column;
-			gap: 7;
           }
         ::-webkit-scrollbar {
             display: none;
@@ -103,6 +163,8 @@ const theme = createTheme(defautTheme, {
 			fontFamily: 'poppins',
 			fontStyle: 'normal',
 			fontWeight: 900,
+			fontSize: '37.32px',
+			color: defautTheme.palette.primary.main,
 			[defautTheme.breakpoints.between('xs', 'sm')]: {},
 			[defautTheme.breakpoints.up('md')]: {},
 		},
@@ -110,7 +172,6 @@ const theme = createTheme(defautTheme, {
 			fontFamily: 'poppins',
 			fontStyle: 'normal',
 			fontWeight: 900,
-			fontSize: '37.32px',
 			[defautTheme.breakpoints.between('xs', 'sm')]: {},
 			[defautTheme.breakpoints.up('md')]: {},
 		},
@@ -149,6 +210,7 @@ const theme = createTheme(defautTheme, {
 			fontFamily: 'poppins',
 			fontStyle: 'normal',
 			fontWeight: 400,
+			color: defautTheme.palette.primary.light,
 			[defautTheme.breakpoints.between('xs', 'sm')]: {},
 			[defautTheme.breakpoints.up('md')]: {},
 			// lineHeight: '1.6rem',

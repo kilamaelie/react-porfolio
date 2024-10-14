@@ -46,7 +46,7 @@ export const DrawerBar = (props) => {
 				</Grid>
 				<Grid item p={2}>
 					{navLinks.map((page) => (
-						<Link to={page.link} key={page}>
+						<Link to={page.link} key={page.id}>
 							<MenuItem onClick={() => props.onClick()}>
 								<Grid container spacing={3}>
 									<Grid item>

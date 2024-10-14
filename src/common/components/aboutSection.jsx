@@ -4,47 +4,51 @@ import { BasicTab } from '../utilities/tabs';
 const tabPanel = [
 	{
 		title: 'Skills',
-		data: ['Node.js', 'Express', 'JavaScript', 'React', 'Nextjs'],
+		data: [
+			{ id: '001', skill: 'Node.js' },
+			{ id: '002', skill: 'Express' },
+			{ id: '003', skill: 'JavaScript' },
+			{ id: '004', skill: 'React' },
+			{ id: '005', skill: 'Nextjs' },
+		],
 	},
 	{
 		title: 'Education',
-		data: ['Bachelor of Science, Computer Software Engineering', 'CCNA Cisco'],
+		data: [
+			{
+				id: '006',
+				skill: 'Bachelor of Science, Computer Software Engineering',
+			},
+			{ id: '007', skill: 'CCNA Cisco' },
+		],
 	},
 ];
 
 export const AboutSection = () => (
-	<Grid container direction="column" gap={6}>
-		<Grid item>
-			<Typography variant="h3">About Me</Typography>
-		</Grid>
-		<Grid item container>
-			<Grid item xs={12} md={3}>
-				<Avatar
-					src="https://res.cloudinary.com/dwz5lx2k7/image/upload/v1677023871/portfolio/ecom_u4wair.png"
-					sx={{
-						display: {
-							xs: 'none',
-							sm: 'none',
-							md: 'flex',
-						},
-						width: { xs: 100, sm: 170 },
-						height: { xs: 100, sm: 170 },
-					}}
-				/>
-			</Grid>
+	<Grid item container direction="column" alignItems="center" gap={6}>
+		<Typography variant="h2">About Me</Typography>
+		<Grid container item xs={12} md={3} justifyContent="space-between">
+			<Avatar
+				src="https://res.cloudinary.com/dwz5lx2k7/image/upload/v1677023871/portfolio/ecom_u4wair.png"
+				sx={{
+					display: {
+						xs: 'none',
+						sm: 'none',
+						md: 'flex',
+					},
+					width: { xs: 100, sm: 170 },
+					height: { xs: 100, sm: 170 },
+				}}
+			/>
 			<Grid item xs={12} md={9} container direction="column" gap={3}>
-				<Grid item>
-					<Typography variant="body1" color="primary.light">
-						I am a software engineer with a passion for solving complex problems
-						and creating innovative solutions. With over three years of
-						experience in full-stack mobile and web development. I enjoy working
-						in collaborative environments and thrive on challenges that allow me
-						to push the boundaries of what&apos;s possible with technology.
-					</Typography>
-				</Grid>
-				<Grid item>
-					<BasicTab tabPanel={tabPanel} />
-				</Grid>
+				<Typography variant="body1" color="primary.light">
+					I am a software engineer with a passion for solving complex problems
+					and creating innovative solutions. With over three years of experience
+					in full-stack mobile and web development. I enjoy working in
+					collaborative environments and thrive on challenges that allow me to
+					push the boundaries of what&apos;s possible with technology.
+				</Typography>
+				<BasicTab tabPanel={tabPanel} />
 			</Grid>
 		</Grid>
 	</Grid>

@@ -2,7 +2,7 @@ import { Grid, Typography } from '@mui/material';
 import { BasicTab } from '../utilities/tabs';
 
 // const tab = ['All', 'Web', 'Mobile'];
-const isCentered = 'true';
+const isCentered = true;
 
 const tabContent = [
 	{
@@ -11,7 +11,7 @@ const tabContent = [
 			{
 				thumbnail:
 					'https://res.cloudinary.com/dwz5lx2k7/image/upload/v1668510229/ipyfsdigmsu12t28xs0i.jpg',
-				title: 'React Portfolio',
+				title: 'React Portfolio 1',
 				description:
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
 				links: [
@@ -28,7 +28,7 @@ const tabContent = [
 			{
 				thumbnail:
 					'https://res.cloudinary.com/dwz5lx2k7/image/upload/v1668510229/ipyfsdigmsu12t28xs0i.jpg',
-				title: 'React Portfolio',
+				title: 'React Portfolio 2',
 				description:
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
 				links: [
@@ -45,7 +45,41 @@ const tabContent = [
 			{
 				thumbnail:
 					'https://res.cloudinary.com/dwz5lx2k7/image/upload/v1668510229/ipyfsdigmsu12t28xs0i.jpg',
-				title: 'React Portfolio',
+				title: 'React Portfolio 3',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+				links: [
+					{
+						title: 'GitHub',
+						url: 'https://github.com',
+					},
+					{
+						title: 'GitHub',
+						url: 'https://github.com',
+					},
+				],
+			},
+			{
+				thumbnail:
+					'https://res.cloudinary.com/dwz5lx2k7/image/upload/v1668510229/ipyfsdigmsu12t28xs0i.jpg',
+				title: 'React Portfolio 4',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+				links: [
+					{
+						title: 'GitHub',
+						url: 'https://github.com',
+					},
+					{
+						title: 'GitHub',
+						url: 'https://github.com',
+					},
+				],
+			},
+			{
+				thumbnail:
+					'https://res.cloudinary.com/dwz5lx2k7/image/upload/v1668510229/ipyfsdigmsu12t28xs0i.jpg',
+				title: 'React Portfolio 5',
 				description:
 					'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
 				links: [
@@ -109,19 +143,14 @@ const tabContent = [
 export const ProjectSection = () => {
 	return (
 		<Grid container direction="column" gap={4}>
-			<Grid item>
-				<Typography align="center" variant="h3">
-					My Projects
-				</Typography>
-			</Grid>
-			<Grid item>
-				<BasicTab
-					// tabTitle={tab}
-					centered={isCentered}
-					tabPanel={tabContent}
-					tabSection="Project"
-				/>
-			</Grid>
+			<Typography align="center" variant="h2">
+				My Projects
+			</Typography>
+			<BasicTab
+				centered={isCentered}
+				tabPanel={tabContent}
+				tabSection="Project"
+			/>
 		</Grid>
 	);
 };
