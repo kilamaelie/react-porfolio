@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+## React Portfolio Template
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a personal portfolio template built with ReactJS, Material-UI (MUI), Framer Motion, React Router DOM, and is linted with ESLint. It includes Husky for pre-commit checks. You can use this project as your personal portfolio by cloning it and customizing it as per your needs.
 
-## Available Scripts
+![banner](https://res.cloudinary.com/dwz5lx2k7/image/upload/v1729501806/tutorials/Screenshot_2024-10-21_at_11.47.32_AM_ayj2ov.webp)
 
-In the project directory, you can run:
+### Features
 
-### `yarn start`
+- Responsive design using MUI
+- Smooth animations with Framer Motion
+- Routing with React Router DOM
+- Code quality ensured by ESLint and Husky
+- Ready to be customized and deployed
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Demo
+- Installation
+- Usage
+- Contributing
+- License
 
-### `yarn test`
+#### Demo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Check out the live demo of this portfolio template here: [Live demo](x-devsop.netlify.app/)
 
-### `yarn build`
+#### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone the repository and install the dependencies.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone  https://github.com/kilamaelie/react-porfolio.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+cd react-porfolio
 
-### `yarn eject`
+yarn
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To start the development server, run the following command:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+yarn start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This will run the app in development mode. Open http://localhost:3000 to view it in the browser.
 
-## Learn More
+#### Customization
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Pages and Components: Modify the content in the src/components folders to fit your personal details and projects.
+- Animations: Use Framer Motion to customize animations or add new ones.
+- Styling: The project uses Material-UI (MUI) for styling. Modify existing components or add new ones as needed.
+- Routing: Manage your routes in src/App.js using React Router DOM.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Build
 
-### Code Splitting
+To create a production build, use:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+ yarn build
+```
 
-### Analyzing the Bundle Size
+#### Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This project is open to contributions! If you'd like to contribute, please follow these steps:
 
-### Making a Progressive Web App
+- Fork the repository
+- Create a new branch (git checkout -b feature/your-feature)
+- Commit your changes (git commit -m 'Add some feature')
+- Push to the branch (git push origin feature/your-feature)
+- Open a pull request
+  Before committing, ensure that your code passes the linting checks:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+yarn lint
+```
 
-### Advanced Configuration
+The project uses Husky to automatically run linting before every commit.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Issues
 
-### Deployment
+Feel free to report issues and bugs by opening an issue on this repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### License
 
-### `yarn build` fails to minify
+This project is licensed under the MIT License. You are free to use, modify, and distribute it as your own.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact
+
+:mailbox: Reach me out!
+
+[![Twitter Badge](https://img.shields.io/badge/-@kilamaelie-1ca0f1?style=flat&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/kilamaelie)](https://twitter.com/kilamaelie) [![Linkedin Badge](https://img.shields.io/badge/-kilamaelie-0e76a8?style=flat&labelColor=0e76a8&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kilamaelie/) [![Mail Badge](https://img.shields.io/badge/-elijahkilama-c0392b?style=flat&labelColor=c0392b&logo=gmail&logoColor=white)](mailto:elijahkilama14@gmail.com)
+
+##### If you find the content interesting and useful, feel free to use the "Buy me a coffee" link below to support me and buy me a coffee.
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/kilamaelie)
