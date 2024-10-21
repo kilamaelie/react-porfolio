@@ -22,7 +22,7 @@ This is a personal portfolio template built with ReactJS, Material-UI (MUI), Fra
 
 #### Demo
 
-Check out the live demo of this portfolio template here: [Live demo](x-devsop.netlify.app/)
+Check out the live demo of this portfolio template here: [Live demo](https://x-devsop.netlify.app/)
 
 #### Installation
 
