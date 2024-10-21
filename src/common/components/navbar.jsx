@@ -53,6 +53,7 @@ export const Navbar = () => {
 				xs={11}
 				md={8}
 				xl={6}
+				marginTop="20px"
 				sx={
 					{
 						// marginInline: 'auto',
@@ -62,7 +63,7 @@ export const Navbar = () => {
 				alignContent="center"
 			>
 				<Typography variant="h3" color="primary.main">
-					Logo
+					DevsOp
 					<Typography variant="h3" color="secondary.main" component="span">
 						.
 					</Typography>

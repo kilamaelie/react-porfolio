@@ -27,7 +27,10 @@ export const HeroSection = () => {
 			sx={{
 				paddingTop: '10rem',
 			}}
-			gap={6}
+			gap={{
+				xs: 6,
+				sm: 10,
+			}}
 		>
 			<Grid item>
 				<Typography variant="h6" color="primary.light" textAlign="center">
@@ -37,13 +40,15 @@ export const HeroSection = () => {
 					Full Stack Developer
 				</Typography>
 			</Grid>
-			<Typography textAlign="center" variant="body2">
-				Lörem ipsum rengen ahet medan orade lökosat. Ren geser tism hexak. Venar
-				reras vär antropoosmos megaskop. Oheten exok. Vaspeligen egov decikron,
-				galigt pretion. Temölig möl med ovis: överklassafari möliga. Heteront
-				etöd utom exon börsrobot. Miss dalig därför att fadat. Gigakir tikiska.
-				Råra treck bioning coronahälsning i dese.
-			</Typography>
+			<Grid item>
+				<Typography textAlign="center" variant="body2">
+					I am a software engineer with a passion for solving complex problems
+					and creating innovative solutions. With over three years of experience
+					in full-stack mobile and web development. I enjoy working in
+					collaborative environments and thrive on challenges that allow me to
+					push the boundaries of what &apos;s possible with technology.
+				</Typography>
+			</Grid>
 			<Grid item container justifyContent="center" gap={6}>
 				{archivements.map((item) => (
 					<Grid
@@ -53,7 +58,7 @@ export const HeroSection = () => {
 						direction="column"
 						alignItems="center"
 						gap={1}
-						xs={12}
+						xs={3}
 						sm={2}
 					>
 						<Typography align="center" variant="body2" color="primary.light">
@@ -63,7 +68,7 @@ export const HeroSection = () => {
 					</Grid>
 				))}
 			</Grid>
-			<Grid item container flexDirection="column" alignItems="center" gap={2}>
+			<Grid item container flexDirection="column" alignItems="center" gap={5}>
 				<Grid item container direction="row" gap={2} justifyContent="center">
 					{icons.map((item) => (
 						<IconButton

@@ -16,9 +16,19 @@ export const Footer = () => {
 			}}
 		>
 			<Grid item>
-				<Typography variant="caption" color="primary.light">
-					Copyright &copy; {new Date().getFullYear()} Made with ❤️ by Kilama.
-					All right reserved
+				<Typography variant="caption" align="center" color="primary.light">
+					Copyright © 2024 Made with ❤️ by &nbsp;
+					<Typography
+						component="a"
+						sx={{ textDecoration: 'none', cursor: 'pointer' }}
+						href="https://kilamaelie.com"
+						variant="body2"
+						target="_blank"
+						color="gray"
+					>
+						Kilama Elie.
+					</Typography>
+					&nbsp; All right reserved
 				</Typography>
 			</Grid>
 		</Grid>
