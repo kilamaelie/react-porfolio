@@ -16,6 +16,7 @@ const Home = () => {
 				container
 				gap={20}
 				flexDirection="column"
+				marginBottom="20px"
 			>
 				<HeroSection />
 				<AboutSection />
